@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Internship Recommendations</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+            margin:0;
+        }
+
+        .header{
+            background:#007BFF;
+            color:white;
+            padding:15px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .header a{
+            color:white;
+            text-decoration:none;
+            background:red;
+            padding:8px 15px;
+            border-radius:5px;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            margin-top:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:20px;
+            box-shadow:0px 0px 10px lightgray;
+        }
+
+        .score{
+            color:green;
+            font-size:20px;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h2>AI Internship Recommendation System</h2>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+<div class="container">
+
+<h2>Welcome {{ student }}</h2>
+
+{% if recommendations %}
+
+{% for job in recommendations %}
+
+<div class="card">
+
+<h2>{{ job.title }}</h2>
+
+<p><b>Company:</b> {{ job.company }}</p>
+
+<p><b>Location:</b> {{ job.location }}</p>
+
+<p><b>Required Skills:</b> {{ job.skills }}</p>
+
+<p><b>Duration:</b> {{ job.duration }}</p>
+
+<p>{{ job.description }}</p>
+
+<p class="score">⭐ Match Score : {{ job.score }}%</p>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<h3>No internships found.</h3>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
