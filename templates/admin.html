@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⚙️ Admin Dashboard</h1>
+
+    <p style="text-align:center;color:gray;">
+        Add and manage internship opportunities
+    </p>
+
+    <form method="POST" action="/admin">
+
+        <label>Internship Title</label>
+        <input type="text" name="title" placeholder="Internship Title" required>
+
+        <label>Company Name</label>
+        <input type="text" name="company" placeholder="Company Name" required>
+
+        <label>Location</label>
+        <input type="text" name="location" placeholder="Location" required>
+
+        <label>Required Skills</label>
+        <input type="text" name="skills" placeholder="Required Skills" required>
+
+        <label>Duration</label>
+        <input type="text" name="duration" placeholder="Duration" required>
+
+        <label>Description</label>
+        <textarea name="description" rows="5" placeholder="Internship Description" required></textarea>
+
+        <button type="submit">➕ Add Internship</button>
+
+    </form>
+
+    <hr>
+
+    <h2>
