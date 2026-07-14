@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommended Internships</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎯 AI Recommended Internships</h1>
+
+    {% if recommendations %}
+
+        {% for internship in recommendations %}
+
+        <div class="card">
+
+            <h2>{{ internship.title }}</h2>
+
+            <p><strong>🏢 Company:</strong> {{ internship.company }}</p>
+
+            <p><strong>📍 Location:</strong> {{ internship.location }}</p>
+
+            <p><strong>💻 Required Skills:</strong> {{ internship.skills }}</p>
+
+            <p><strong>⏳ Duration:</strong> {{ internship.duration }}</p>
+
+            <p><strong>📝 Description:</strong> {{ internship.description }}</p>
+
+            <p style="color:green;font-size:18px;">
+                <strong>✅ Match Score: {{ internship.score }}%</strong>
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="card">
+            <h3>No matching internships found.</h3>
+            <p>Please upload a resume or ask the admin to add more internships.</p>
+        </div>
+
+    {% endif %}
+
+    <br>
+
+    <div style="text-align:center;">
+        <a href="/dashboard">⬅ Back to Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>

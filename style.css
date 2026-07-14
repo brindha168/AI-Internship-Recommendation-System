@@ -1,0 +1,161 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    min-height:100vh;
+}
+
+/* Container */
+.container{
+    width:420px;
+    max-width:90%;
+    margin:60px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    animation:fadeIn 0.8s ease;
+}
+
+/* Headings */
+h1{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+/* Labels */
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+    color:#444;
+}
+
+/* Inputs */
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    transition:0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#2563eb;
+    outline:none;
+    box-shadow:0 0 8px rgba(37,99,235,0.3);
+}
+
+/* Buttons */
+button{
+    width:100%;
+    padding:13px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* Links */
+a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:500;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* Success Box */
+.result{
+    margin-top:20px;
+    padding:18px;
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    border-radius:8px;
+}
+
+.result p{
+    font-size:17px;
+    font-weight:600;
+    color:#065f46;
+}
+
+/* Tables (Admin Page) */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:#fff;
+}
+
+table th{
+    background:#2563eb;
+    color:#fff;
+    padding:12px;
+}
+
+table td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+table tr:hover{
+    background:#f3f4f6;
+}
+
+/* Cards (Recommendations) */
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin:15px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin:5px 0;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

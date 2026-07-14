@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👤 Student Profile</h1>
+
+    <p style="text-align:center;color:gray;">
+        Complete your profile before uploading your resume.
+    </p>
+
+    <form action="/profile" method="POST">
+
+        <label>Student Name</label>
+        <input type="text"
+               name="name"
+               value="{{ name }}"
+               placeholder="Enter your full name"
+               required>
+
+        <label>College Name</label>
+        <input type="text"
+               name="college"
+               value="{{ college }}"
+               placeholder="Enter your college name"
+               required>
+
+        <label>Department</label>
+        <input type="text"
+               name="department"
+               value="{{ department }}"
+               placeholder="Enter your department"
+               required>
+
+        <label>CGPA</label>
+        <input type="text"
+               name="cgpa"
+               value="{{ cgpa }}"
+               placeholder="Enter your CGPA"
+               required>
+
+        <label>Skills</label>
+        <textarea name="skills"
+                  rows="4"
+                  placeholder="Example: Python, Flask, SQL"
+                  required>{{ skills }}</textarea>
+
+        <button type="submit">💾 Save Profile</button>
+
+    </form>
+
+    <br>
+
+    <div style="text-align:center;">
+        <a href="/resume">📄 Continue to Resume Upload</a>
+    </div>
+
+    <br>
+
+    <div style="text-align:center;">
+        <a href="/dashboard">⬅ Back to Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>

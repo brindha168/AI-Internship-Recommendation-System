@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Internship</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:500px;
+            margin:30px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:blue;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Edit Internship</h2>
+
+<form method="POST">
+
+<input type="text" name="title" value="{{ internship.title }}" required>
+
+<input type="text" name="company" value="{{ internship.company }}" required>
+
+<input type="text" name="location" value="{{ internship.location }}" required>
+
+<input type="text" name="skills" value="{{ internship.skills }}" required>
+
+<input type="text" name="duration" value="{{ internship.duration }}" required>
+
+<textarea name="description" rows="5" required>{{ internship.description }}</textarea>
+
+<button type="submit">Update Internship</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
